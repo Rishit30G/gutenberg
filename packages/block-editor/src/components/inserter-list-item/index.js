@@ -23,6 +23,33 @@ import BlockIcon from '../block-icon';
 import { InserterListboxItem } from '../inserter-listbox';
 import InserterDraggableBlocks from '../inserter-draggable-blocks';
 
+/**
+ * InserterListItem component displays a single block type in the inserter.
+ *
+ * @example
+ * ```jsx
+ * function Example() {
+ *   return (
+ *     <InserterListItem
+ *       className="my-class"
+ *       isFirst={ true }
+ *       item={ item }
+ *       onSelect={ onSelect }
+ *       onHover={ onHover }
+ *     />
+ *   );
+ * }
+ * ```
+ *
+ * @param {Object}   props             The component props.
+ * @param {string}   props.className   Additional class name to apply to the item.
+ * @param {boolean}  props.isFirst     Whether the item is the first in the list.
+ * @param {Object}   props.item        The block type item to display.
+ * @param {Function} props.onSelect    Callback to run when the item is selected.
+ * @param {Function} props.onHover     Callback to run when the item is hovered.
+ * @param {boolean}  props.isDraggable Whether the item is draggable.
+ * @return {Element}                    The block type item element.
+ */
 function InserterListItem( {
 	className,
 	isFirst,
