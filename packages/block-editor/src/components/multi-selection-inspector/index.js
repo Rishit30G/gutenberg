@@ -12,6 +12,22 @@ import { __experimentalHStack as HStack } from '@wordpress/components';
 import BlockIcon from '../block-icon';
 import { store as blockEditorStore } from '../../store';
 
+/**
+ * MultiSelection Inspector component displays the number of selected blocks.
+ *
+ * @example
+ * ```jsx
+ * import { <MultiSelectionInspector /> } from '@wordpress/block-editor';
+ *
+ * const SelectedBlockCount = getSelectedBlockCount();
+ *
+ * if ( SelectedBlockCount > 1 ) {
+ *    const MyMultiSelectionInspector = () => <MultiSelectionInspector />;
+ *}
+ *```
+ *
+ * @return {Element} MultiSelectionInspector
+ */
 export default function MultiSelectionInspector() {
 	const selectedBlockCount = useSelect(
 		( select ) => select( blockEditorStore ).getSelectedBlockCount(),
