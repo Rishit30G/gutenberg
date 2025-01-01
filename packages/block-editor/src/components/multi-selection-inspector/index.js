@@ -15,6 +15,8 @@ import { store as blockEditorStore } from '../../store';
 /**
  * MultiSelection Inspector component displays the number of selected blocks.
  *
+ * @see https://github.com/WordPress/gutenberg/blob/HEAD/packages/block-editor/src/components/multi-selection-inspector/README.md
+ *
  * @example
  * ```jsx
  * import { <MultiSelectionInspector /> } from '@wordpress/block-editor';
