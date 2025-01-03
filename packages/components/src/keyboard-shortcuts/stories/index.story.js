@@ -1,7 +1,7 @@
 /**
- * External dependencies
+ * WordPress dependencies
  */
-import { useState } from '@worpress/element';
+import { useState } from '@wordpress/element';
 
 /**
  * Internal dependencies
