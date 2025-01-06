@@ -18,6 +18,38 @@ function chunk( array, size ) {
 	return chunks;
 }
 
+/**
+ * Renders a list of block types.
+ *
+ * @example
+ * ```jsx
+ * const items = [
+ * 	{ id: 'core/paragraph', icon: paragraph, title: 'Paragraph' },
+ * 	{ id: 'core/image', title: 'Image' },
+ * ];
+ *
+ * function MyBlockTypesList() {
+ * 	return (
+ * 		<BlockTypesList
+ * 			items={ items }
+ * 			onSelect={ ( item ) => console.log( 'Selected:', item ) }
+ * 			onHover={ ( item ) => console.log( 'Hovered:', item ) }
+ * 			label="Block types"
+ *          isDraggable={ false }
+ *          children={ <div>Custom content</div> }
+ * 		/>
+ *
+ * ```
+ * @param {Object}      props             Component props.
+ * @param {Array}       props.items       An array of block types to display.
+ * @param {Function}    props.onSelect    Callback function to call when a block type is selected.
+ * @param {Function}    props.onHover     Callback function to call when a block type is hovered.
+ * @param {string}      props.label       A label for the list.
+ * @param {boolean}     props.isDraggable Whether the blocks are draggable.
+ * @param {JSX.Element} props.children    Custom content to render at the end of the list
+ *
+ * @return {Element} The block types list component.
+ */
 function BlockTypesList( {
 	items = [],
 	onSelect,
