@@ -186,6 +186,24 @@ function BlockSwitcherDropdownMenuContents( {
 	);
 }
 
+/**
+ * BlockSwitcher component switches between block types and styles.
+ *
+ *
+ * @example
+ * ```jsx
+ * function Example(){
+ * return (
+ *   <BlockSwitcher clientIds={ [ 'block-1', 'block-2' ] } />
+ * );
+ * }
+ *
+ * ```
+ * @param {Object}   props           Component props.
+ * @param {string[]} props.clientIds The client IDs of the blocks to switch.
+ *
+ * @return {Element} The BlockSwitcher component.
+ */
 export const BlockSwitcher = ( { clientIds } ) => {
 	const {
 		hasContentOnlyLocking,
