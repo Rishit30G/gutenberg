@@ -9,6 +9,20 @@ import {
 } from '@wordpress/components';
 import { __, _x, _n, sprintf } from '@wordpress/i18n';
 
+/**
+ * Pagination component displays a list of pages.
+ *
+ * @example
+ * ```jsx
+ * <Pagination currentPage={ 1 } numPages={ 5 } changePage={ () => {} } totalItems={ 10 } />
+ * ```
+ * @param {Object}   props             Component props.
+ * @param {number}   props.currentPage The current page number.
+ * @param {number}   props.numPages    The total number of pages.
+ * @param {Function} props.changePage  Callback function to call when a page is selected.
+ * @param {number}   props.totalItems  The total number of items.
+ * @return {JSX.Element} Pagination component.
+ */
 export default function Pagination( {
 	currentPage,
 	numPages,
