@@ -21,8 +21,18 @@ export const __unstableUseClipboardHandler = () => {
 };
 
 /**
- * @deprecated
- * @param {Object} props
+ * CopyHandler component displays a copy handler for the block editor.
+ *
+ * @param props Component props.
+ * @return {JSX.Element} CopyHandler component.
+ * @example
+ * ```jsx
+ * function Example(){
+ * return (
+ *   <CopyHandler/>
+ *   );
+ * );
+ * }
  */
 export default function CopyHandler( props ) {
 	deprecated( 'CopyHandler', {
