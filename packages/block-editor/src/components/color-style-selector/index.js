@@ -78,6 +78,15 @@ const renderToggleComponent =
 		);
 	};
 
+/**
+ * Block Colors Style Selector component displays a dropdown menu for selecting block colors, with built-in text and background color support.
+ * 
+ * @param {Object} props
+ * @param {JSX.Element} props.children Content to render inside the dropdown.
+ * @param {Object} props.other Other props to pass to the Text
+ * 
+ * @return {Element} Block Colors Style Selector component.
+ */
 const BlockColorsStyleSelector = ( { children, ...other } ) => {
 	deprecated( `wp.blockEditor.BlockColorsStyleSelector`, {
 		alternative: 'block supports API',
