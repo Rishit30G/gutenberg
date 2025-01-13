@@ -19,7 +19,7 @@ const meta = {
 			},
 			description: {
 				component:
-					'The BlockSwitcher component is used to switch between different block types.',
+					'The `BlockManager` component displays a list of blocks with quick navigation.',
 			},
 		},
 	},
