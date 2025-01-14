@@ -84,7 +84,7 @@ const meta = {
 		},
 		onSaveImage: {
 			control: {
-				type: 'function',
+				type: null,
 			},
 			description: 'Function to call when the image is saved',
 			table: {
@@ -95,7 +95,7 @@ const meta = {
 		},
 		onFinishEditing: {
 			control: {
-				type: 'function',
+				type: null,
 			},
 			description: 'Function to call when editing is finished',
 			table: {
@@ -108,7 +108,7 @@ const meta = {
 			control: {
 				type: 'object',
 			},
-			description: 'Border properties of the image being edited',
+			description: 'The area around the image',
 			table: {
 				type: {
 					summary: 'object',
@@ -125,15 +125,14 @@ export const Default = {
 		id: 'image-id',
 		url: 'https://cdn-icons-png.flaticon.com/512/174/174881.png',
 		width: 300,
-		height: 200,
+		height: 300,
 		naturalHeight: 600,
 		naturalWidth: 800,
-		onSaveImage: () => {},
-		onFinishEditing: () => {},
 		borderProps: {
-			borderRadius: 5,
-			borderWidth: 1,
-			borderColor: 'green',
+			style: {
+				backgroundColor: '#e0e0e0',
+				border: '1px solid #000',
+			},
 		},
 	},
 	render: function Template( args ) {
