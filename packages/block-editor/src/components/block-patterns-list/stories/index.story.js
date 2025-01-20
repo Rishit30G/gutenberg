@@ -1,14 +1,25 @@
 /**
+ * External dependencies
+ */
+import blockLibraryStyles from '!!raw-loader!../../../../../block-library/build-style/style.css';
+
+/**
  * Internal dependencies
  */
 import BlockPatternsList from '..';
 import patterns from './fixtures';
+import { ExperimentalBlockEditorProvider } from '../../provider';
 
 /**
  * WordPress dependencies
  */
 import { registerCoreBlocks } from '@wordpress/block-library';
+import { __ } from '@wordpress/i18n';
 registerCoreBlocks();
+
+const blockEditorSettings = {
+	styles: [ { css: blockLibraryStyles } ],
+};
 
 /**
  * Storybook metadata
@@ -128,10 +139,14 @@ export const Default = {
 	args: {
 		blockPatterns: patterns,
 		isDraggable: false,
-		label: 'Block patterns story',
+		label: __( 'Block patterns story' ),
 		showTitlesAsTooltip: false,
 	},
 	render: function Template( args ) {
-		return <BlockPatternsList { ...args } />;
+		return (
+			<ExperimentalBlockEditorProvider settings={ blockEditorSettings }>
+				<BlockPatternsList { ...args } />
+			</ExperimentalBlockEditorProvider>
+		);
 	},
 };
